@@ -1,4 +1,4 @@
-# PP_1_1_3_JDBC_Hibernate
+# PP_1_1_3_JDBC
 Для выполнения задания необходимо:
 
  Клонировать/скачать заготовку здесь: https://github.com/KataAcademy/PP_1_1_3-4_JDBC_Hibernate
