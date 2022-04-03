@@ -21,11 +21,6 @@ public class UserDaoJDBCImpl implements UserDao {
                     "(id BIGINT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(255), last_name VARCHAR(255), age INT)");
         } catch (SQLException e) {
             e.printStackTrace();
-            try {
-                connection.rollback();
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
         }
     }
 
@@ -34,11 +29,6 @@ public class UserDaoJDBCImpl implements UserDao {
             stmt.executeUpdate("DROP TABLE IF EXISTS users");
         } catch (SQLException e) {
             e.printStackTrace();
-            try {
-                connection.rollback();
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
         }
     }
 
@@ -50,11 +40,6 @@ public class UserDaoJDBCImpl implements UserDao {
             pstm.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
-            try {
-                connection.rollback();
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
         }
     }
 
@@ -64,11 +49,6 @@ public class UserDaoJDBCImpl implements UserDao {
             pstm.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
-            try {
-                connection.rollback();
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
         }
     }
 
@@ -83,11 +63,6 @@ public class UserDaoJDBCImpl implements UserDao {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            try {
-                connection.rollback();
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
         }
 
         return users;
@@ -98,11 +73,6 @@ public class UserDaoJDBCImpl implements UserDao {
             stmt.executeUpdate("TRUNCATE TABLE users");
         } catch (SQLException e) {
             e.printStackTrace();
-            try {
-                connection.rollback();
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
         }
     }
 }
